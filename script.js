@@ -24,32 +24,5 @@ function startConfetti() {
     }
   }
 
-// Check if the device supports motion events
-if (window.DeviceMotionEvent) {
-  // Set the threshold for detecting motion
-  const motionThreshold = 10;
 
-  // Event listener for device motion
-  window.addEventListener("devicemotion", handleDeviceMotion, false);
-
-  // Function to handle device motion events
-  function handleDeviceMotion(event) {
-    // Get the acceleration values
-    const accelerationX = event.accelerationIncludingGravity.x;
-    const accelerationY = event.accelerationIncludingGravity.y;
-    const accelerationZ = event.accelerationIncludingGravity.z;
-
-    // Calculate the magnitude of acceleration
-    const accelerationMagnitude = Math.sqrt(
-      Math.pow(accelerationX, 2) +
-      Math.pow(accelerationY, 2) +
-      Math.pow(accelerationZ, 2)
-    );
-
-    // Check if the acceleration magnitude exceeds the threshold
-    if (accelerationMagnitude > motionThreshold) {
-      // Perform your desired action or animation here
-      // For example, trigger confetti explosion or change background color
-    }
-  }
 }
