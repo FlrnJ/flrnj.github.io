@@ -77,8 +77,8 @@ h1 {
 
 .confetti {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   animation: confettiFalling 5s linear infinite;
 }
