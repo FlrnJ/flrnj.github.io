@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 200px;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.animated-text {
+  display: inline-block;
+  animation: moveText 10s linear infinite;
+  white-space: nowrap;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 50px;
+  color: white;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+#message p {
+  margin-bottom: 15px;
+  animation: bounceText 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveText {
+  0% {
+    color: #FF0000;
+    transform: translateX(100%);
+  }
+  100% {
+    color: #00FF00;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bounceText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes confettiFalling {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: confettiFalling 5s linear infinite;
+}
